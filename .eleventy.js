@@ -6,9 +6,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("images");
 
   return {
+    pathPrefix: "/iris-pedia/",
     dir: {
       input: ".",
-      output: "_site" // 完成したサイトが書き出される場所
+      output: "docs" // 完成したサイトが書き出される場所
     }
   };
 };
