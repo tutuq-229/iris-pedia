@@ -15,18 +15,18 @@
     <div id="sidebar">
 
         <h1 class="sidebar-logo">
-            <a href="/">
+            <a href="{{ '/' | url }}">
                 <img src="{{ '/images/iris_logo.png' | url }}" alt="iris">
             </a>
         </h1>
-        <h2><a href="/">IRIS_PEDIA</a></h2>
+        <h2><a href="{{ '/' | url }}">IRIS_PEDIA</a></h2>
 
         <details>
             <summary>まずはここから</summary>
             <ul>
                 {% for post in collections.introduction %}
                     <li>
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                        <a href="{{ post.url | url}}">{{ post.data.title }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -37,7 +37,7 @@
             <ul>
                 {% for post in collections.infra %}
                     <li>
-                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                        <a href="{{ post.url | url}}">{{ post.data.title }}</a>
                     </li>
                 {% endfor %}
             </ul>
