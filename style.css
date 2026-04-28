@@ -1,0 +1,148 @@
+/* レイアウトの分割 */
+body {
+  display: flex; /* 横並びにする */
+  overflow: hidden; /* 全体はスクロールさせない */
+
+  font-family: 'Montserrat', 'Zen Kaku Gothic New', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* 表（テーブル）の読みやすさ向上 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0; /* 前後の文章との間隔を広く取る */
+  font-size: 0.9rem; /* 本文よりわずかに小さくするとデータ感が出ます */
+  table-layout: auto; /* コンテンツに合わせて列幅を調整 */
+}
+
+/* ヘッダーセルの調整 */
+th {
+  background: #a1c3eb;
+  color: var(--accent-color);
+  padding: 15px 20px; /* 左右の余白をたっぷり取る */
+  text-align: left;
+  border-bottom: 2px solid var(--accent-color);
+  white-space: nowrap; /* ヘッダーで変な改行を防ぐ */
+}
+
+/* データセルの調整 */
+td {
+  padding: 12px 20px; /* 上下の間隔を広げて1行をゆったりさせる */
+  border-bottom: 1px solid #a1c3eb;
+  vertical-align: top; /* 複数行になった時に上に揃える */
+}
+
+/* 横に長い表でも崩れないようにするおまじない */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto; /* スマホで見るときは横スクロールさせる */
+  }
+}
+
+#sidebar a {
+  text-decoration: none;
+}
+
+#sidebar a:hover{
+  opacity: 0.7;
+  transition: 0.25s;
+}
+
+/* 左側のサイドバー */
+#sidebar {
+  width: 256px;
+  background: rgba(228, 228, 228, 0.8);
+  border-right: 1px solid var(--accent-color);
+  padding: 24px;
+  overflow-y: auto; /* メニューが増えたらここだけスクロール */
+  font-size: 1rem;
+
+  box-shadow: 4px 0 10px rgba(66, 125, 252, 0.7);
+
+  position: relative; 
+  z-index: 10;
+}
+
+#sidebar a:visited {
+  color: var(--accent-color); /* 通常時と同じ色を指定 */
+}
+
+#sidebar h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #0062DC;
+  margin: 8px 0px 24px 0px;
+}
+
+.sidebar-logo {
+  margin: 0px 50px 0px 50px;
+  padding: 0;
+}
+
+.sidebar-logo a {
+  display: block;
+  line-height: 0; 
+}
+
+.sidebar-logo img {
+  max-width: 100%; /* サイドバーの幅に合わせて自動リサイズ */
+  height: auto;    /* アスペクト比を維持 */
+  display: block;  /* 下の余白対策 */
+}
+
+.sidebar-logo a:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+#sidebar summary {
+  cursor: pointer;
+  padding: 5px 0;
+  color: var(--accent-color);
+  list-style: none; /* デフォルトの矢印を消す */
+}
+
+#sidebar summary::before {
+  content: "▶ ";
+  font-size: 0.7rem;
+}
+
+#sidebar details[open] summary::before {
+  content: "▼ ";
+}
+
+#sidebar ul {
+  list-style: none;
+  padding-left: 15px;
+  margin: 5px 0;
+}
+
+#sidebar li {
+  margin-bottom: 5px;
+}
+
+/* 右側のメインコンテンツ */
+main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background: rgb(247, 247, 247);
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+article, .content-body {
+  width: 100%;
+  max-width: 800px; /* NotionやObsidianに近い幅（お好みで700〜900px） */
+  margin: 0 auto;   /* 左右の余白を自動で均等にする */
+}
+
+main a:visited {
+  color: #0263DD; /* 通常時と同じ色を指定 */
+}
