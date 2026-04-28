@@ -5,6 +5,9 @@ module.exports = function(eleventyConfig) {
   // 【追加】imagesフォルダをそのままコピーする設定
   eleventyConfig.addPassthroughCopy("images");
 
+  // .eleventy.js
+  eleventyConfig.addPassthroughCopy(".nojekyll");
+
   return {
     pathPrefix: "/iris-pedia/",
     dir: {
