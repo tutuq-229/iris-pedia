@@ -1,5 +1,5 @@
 npx @11ty/eleventy
 
 git add .
-git commit -m "Fix 404 links with pathPrefix"
+git commit -m "Fix"
 git push origin master
