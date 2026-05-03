@@ -1,7 +1,7 @@
 ---
 layout: layout.html
 title: 通常特技一覧
-tags: normal skill
+tags: trpg
 ---
 
 # 特技一覧
