@@ -53,6 +53,17 @@
                 {% endfor %}
             </ul>
         </details> 
+
+        <details>
+            <summary>宗教・その他</summary>
+            <ul>
+                {% for post in collections.organization %}
+                    <li>
+                        <a href="{{ post.url | url}}">{{ post.data.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </details> 
        
     </div>
 
