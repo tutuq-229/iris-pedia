@@ -33,17 +33,6 @@
         </details>
 
         <details>
-            <summary>インフラ・設備</summary>
-            <ul>
-                {% for post in collections.infra %}
-                    <li>
-                        <a href="{{ post.url | url}}">{{ post.data.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </details>
-
-        <details>
             <summary>TRPGルール</summary>
             <ul>
                 {% for post in collections.trpg %}
@@ -54,6 +43,16 @@
             </ul>
         </details>
 
+        <details>
+            <summary>インフラ・設備</summary>
+            <ul>
+                {% for post in collections.infra %}
+                    <li>
+                        <a href="{{ post.url | url}}">{{ post.data.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </details> 
        
     </div>
 
