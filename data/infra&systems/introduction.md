@@ -1,7 +1,7 @@
 ---
 layout: layout.html
 title: ステッチコード（Stitch Code）
-tags: infra&systems
+tags: infra_systems
 ---
 
 # Stitch Code（ステッチコード）
