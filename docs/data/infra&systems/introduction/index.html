@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>iris_pedia</title>
+    <link rel="stylesheet" href="/iris-pedia/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="sidebar">
+
+        <h1 class="sidebar-logo">
+            <a href="/iris-pedia/">
+                <img src="/iris-pedia/images/iris_logo.png" alt="iris">
+            </a>
+        </h1>
+        <h2><a href="/iris-pedia/">IRIS_PEDIA</a></h2>
+
+        <details>
+            <summary>まずはここから</summary>
+            <ul>
+                
+                    <li>
+                        <a href="/iris-pedia/data/start/introduction/">イントロダクション</a>
+                    </li>
+                
+                    <li>
+                        <a href="/iris-pedia/data/start/symbiont/">シンバイオント</a>
+                    </li>
+                
+            </ul>
+        </details>
+
+        <details>
+            <summary>TRPGルール</summary>
+            <ul>
+                
+                    <li>
+                        <a href="/iris-pedia/data/TRPG/trpg-combatrule/">戦闘システム</a>
+                    </li>
+                
+                    <li>
+                        <a href="/iris-pedia/data/TRPG/role-engineer/">ロール：エンジニア</a>
+                    </li>
+                
+                    <li>
+                        <a href="/iris-pedia/data/TRPG/normalskill/">通常特技一覧</a>
+                    </li>
+                
+            </ul>
+        </details>
+
+        <details>
+            <summary>インフラ・システム</summary>
+            <ul>
+                
+            </ul>
+        </details> 
+
+        <details>
+            <summary>宗教・その他</summary>
+            <ul>
+                
+                    <li>
+                        <a href="/iris-pedia/data/organization/introduction/">Nestism（ネスティズム）</a>
+                    </li>
+                
+            </ul>
+        </details> 
+       
+    </div>
+
+    <main>
+        <article class="content-body">
+            <h1>Stitch Code（ステッチコード）</h1>
+<p>Stitch Code（ステッチコード）は、IRISの視覚情報インフラを支えるために設計された、低ノイズの長方形型コード規格である。人間には「青い幾何学模様」として美しく映り、スキャン端末にはきわめて高い精度で情報を提供する。つまりデザイン重視。</p>
+<h2>1.物理仕様</h2>
+<ul>
+<li>解像度：96x32px</li>
+<li>基本配色：ブルー＆ホワイト
+<br>
+<br>
+<br>
+<br></li>
+</ul>
+<h2>2.セクション構造</h2>
+<p>Stitch Codeは6個のレイヤーで構成される。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">レイヤー名</th>
+<th style="text-align:left">配置</th>
+<th style="text-align:left">役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">リファレンス</td>
+<td style="text-align:left">右下</td>
+<td style="text-align:left">色のキャリブレーション。</td>
+</tr>
+<tr>
+<td style="text-align:left">縦パルスライン</td>
+<td style="text-align:left">右上</td>
+<td style="text-align:left">ヘッダー情報。</td>
+</tr>
+<tr>
+<td style="text-align:left">横パルスライン</td>
+<td style="text-align:left">左下</td>
+<td style="text-align:left">エラー訂正用ハッシュ。</td>
+</tr>
+<tr>
+<td style="text-align:left">ヴォイドライン</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">左と右を分ける。</td>
+</tr>
+<tr>
+<td style="text-align:left">ステッチ</td>
+<td style="text-align:left">左上</td>
+<td style="text-align:left">7本の隙間を持つバー。主要データを格納。</td>
+</tr>
+<tr>
+<td style="text-align:left">UV層</td>
+<td style="text-align:left">全域</td>
+<td style="text-align:left">紫外線反応層。追加のデータを格納。</td>
+</tr>
+<tr>
+<td style="text-align:left"><br></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><br></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><br></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><br></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<h2>3.エラー訂正と予測アルゴリズム</h2>
+<h3>リファレンスキャリブレーション:</h3>
+<p>右下のリファレンスを照合し、照明環境や背景色による「色の変色」をデジタル補正する。</p>
+<h3>ギャップ・プレディクション:</h3>
+<p>上段7本のバーが一定のリズムで並んでいることを利用し、背景に埋もれた「本来あるべき隙間」を逆算して特定する。</p>
+<h3>ヴァリス・イェン符号:</h3>
+<p>下段データをパリティに割り当て、損壊データを数学的に復元する。</p>
+
+        </article>
+    </main>
+</body>
+</html>

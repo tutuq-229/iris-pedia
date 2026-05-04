@@ -44,9 +44,9 @@
         </details>
 
         <details>
-            <summary>インフラ・設備</summary>
+            <summary>インフラ・システム</summary>
             <ul>
-                {% for post in collections.infra %}
+                {% for post in collections.infra&systems %}
                     <li>
                         <a href="{{ post.url | url}}">{{ post.data.title }}</a>
                     </li>
