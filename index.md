@@ -9,4 +9,4 @@ title: iris_pedia TOP
 初めての方は左のカテゴリー欄の「まずはここから」を見てください！
 
 ## 最近の更新
-- [軌道エレベーター「アイリス」について](/iris-infra/orbital-elevator/)
+- [Nestism（ネスティズム）](/organization/nestism/)
